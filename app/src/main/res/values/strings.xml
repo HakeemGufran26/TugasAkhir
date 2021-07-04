@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Tugas Akhir</string>
+    <string name="tEmail">Email</string>
+    <string name="tPassword">Password</string>
+    <string name="bsignin">Sign-In</string>
+    <string name="rname">Nama</string>
+    <string name="ralamat">Alamat</string>
+    <string name="remail">Email</string>
+    <string name="rpassword">Password</string>
+    <string name="rrepassword">Re-Password</string>
+    <string name="beliBlackforst">Buy Now</string>
+    <string name="batalBlackforst">Cancel </string>
+    <string name="beliBundle">Buy Now</string>
+    <string name="batalBundle">Cancel </string>
+    <string name="beliCaramel">Buy Now</string>
+    <string name="batalCaramel">Cancel </string>
+    <string name="beliPandan">Buy Now</string>
+    <string name="batalPandan">Cancel </string>
+    <string name="regis">Sign-up</string>
+</resources>
