@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class ActivityBlackforest extends AppCompatActivity {
-    Button btnbtlBF, btnbeliBF;
+    Button btnbtlBF, btnbeliBF; //deklarasi variable
 
 
     @Override
@@ -16,13 +16,13 @@ public class ActivityBlackforest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blackforest);
 
-        btnbeliBF = findViewById(R.id.beliBlacforest);
+        btnbeliBF = findViewById(R.id.beliBlacforest); //menghubungkan variable botton pada layout
         btnbtlBF = findViewById(R.id.batalBlackforest);
 
         btnbeliBF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ActivityDetailPemesanan.class);
+                Intent i = new Intent(getApplicationContext(), ActivityDetailPemesanan.class); //berpindah ke layout DetailPemesanan
                 startActivity(i);
             }
         });
@@ -30,7 +30,7 @@ public class ActivityBlackforest extends AppCompatActivity {
         btnbtlBF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ActivityHome.class);
+                Intent i = new Intent(getApplicationContext(), ActivityHome.class); //Berpindah ke layout ActivityHome
                 startActivity(i);
             }
         });

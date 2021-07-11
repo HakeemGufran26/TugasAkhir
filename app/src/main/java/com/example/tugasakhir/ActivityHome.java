@@ -9,7 +9,7 @@ import android.widget.Button;
 
 // source code ini di gunakan untuk menampilakan menu
 public class ActivityHome extends AppCompatActivity {
-    Button btnBlackforest, btnPandan, btnCaramel, btnBundle;
+    Button btnBlackforest, btnPandan, btnCaramel, btnBundle; //deklarasi variabel
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +18,13 @@ public class ActivityHome extends AppCompatActivity {
 
         btnBlackforest = findViewById(R.id.buyblackforrest);
         btnPandan = findViewById(R.id.buypandan);
-        btnCaramel = findViewById(R.id.buycaramelM);
+        btnCaramel = findViewById(R.id.buycaramelM); //menghubungkan variabel pada button layout
         btnBundle = findViewById(R.id.buybp);
 
         btnBlackforest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ActivityBlackforest.class);
+                Intent i = new Intent(getApplicationContext(), ActivityBlackforest.class); //berpindah ke layout Blackforest
                 startActivity(i);
             }
         });
@@ -33,7 +33,7 @@ public class ActivityHome extends AppCompatActivity {
         btnPandan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ActivityPandan.class);
+                Intent i = new Intent(getApplicationContext(), ActivityPandan.class); //berpindah ke layout Pandan
                 startActivity(i);
             }
         });
@@ -43,7 +43,7 @@ public class ActivityHome extends AppCompatActivity {
         btnCaramel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ActivityCaramel.class);
+                Intent i = new Intent(getApplicationContext(), ActivityCaramel.class); //berpindah ke layout caramel
                 startActivity(i);
             }
         });
@@ -53,7 +53,7 @@ public class ActivityHome extends AppCompatActivity {
         btnBundle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ActivityBundle.class);
+                Intent i = new Intent(getApplicationContext(), ActivityBundle.class); //berpindah ke layout bundle
                 startActivity(i);
             }
         });

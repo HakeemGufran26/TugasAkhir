@@ -8,20 +8,20 @@ import android.view.View;
 import android.widget.Button;
 
 public class ActivityPandan   extends AppCompatActivity {
-    Button btnbtlPandan, btnbeliPandan;
+    Button btnbtlPandan, btnbeliPandan; //deklarasi variabel
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pandan);
 
-        btnbeliPandan = findViewById(R.id.beliPandan);
+        btnbeliPandan = findViewById(R.id.beliPandan); //menghubungkan variabel pada botton layout
         btnbtlPandan= findViewById(R.id.batalPandan);
 
         btnbeliPandan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ActivityDetailPemesanan.class);
+                Intent i = new Intent(getApplicationContext(), ActivityDetailPemesanan.class); //berpindah layout detail pemesanan
                 startActivity(i);
             }
         });
@@ -29,7 +29,7 @@ public class ActivityPandan   extends AppCompatActivity {
         btnbtlPandan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ActivityHome.class);
+                Intent i = new Intent(getApplicationContext(), ActivityHome.class); //berpindah layout HomeActivity
                 startActivity(i);
             }
         });

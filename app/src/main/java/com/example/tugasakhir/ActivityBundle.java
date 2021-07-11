@@ -8,20 +8,20 @@ import android.view.View;
 import android.widget.Button;
 
 public class ActivityBundle extends AppCompatActivity {
-    Button btnbtlBundle, btnbeliBundle;
+    Button btnbtlBundle, btnbeliBundle; //deklarani variable
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bundle);
 
-        btnbeliBundle = findViewById(R.id.beliBundle);
+        btnbeliBundle = findViewById(R.id.beliBundle); // menghubungkan variable button pada layout
         btnbtlBundle= findViewById(R.id.batalBundle);
 
         btnbeliBundle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ActivityDetailPemesanan.class);
+                Intent i = new Intent(getApplicationContext(), ActivityDetailPemesanan.class); //perpindah ke layout DetailPemesanan
                 startActivity(i);
             }
         });
@@ -29,7 +29,7 @@ public class ActivityBundle extends AppCompatActivity {
         btnbtlBundle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ActivityHome.class);
+                Intent i = new Intent(getApplicationContext(), ActivityHome.class); //berpindah ke layout ActivityHome
                 startActivity(i);
             }
         });

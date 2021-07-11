@@ -17,7 +17,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class Register extends AppCompatActivity {
 
-    EditText usr, email, alamat, pwd, repwd;
+    EditText usr, email, alamat, pwd, repwd; //Deklarasi Variabel
     Button btnrgs, btnbatal;
     CheckBox jenisklm, agama;
 
@@ -31,33 +31,33 @@ public class Register extends AppCompatActivity {
         pwd = findViewById(R.id.redtpassword);
         repwd = findViewById(R.id.redtrepassword);
         btnrgs = findViewById(R.id.rbtndaftar);
-        btnbatal = findViewById(R.id.rbtnbatal);
+        btnbatal = findViewById(R.id.rbtnbatal); //menghubungkan variabel pada button layout
         jenisklm = findViewById(R.id.checkBox);
         jenisklm = findViewById(R.id.checkBox2);
 
         btnrgs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (usr.getText().toString().isEmpty() ||
+                if (usr.getText().toString().isEmpty() || //input yang tidak boleh kosong
                         email.getText().toString().isEmpty() ||
                         alamat.getText().toString().isEmpty() ||
                         pwd.getText().toString().isEmpty() ||
                         repwd.getText().toString().isEmpty() ||
                         jenisklm.getText().toString().isEmpty() ||
                         agama.getText().toString().isEmpty()) {
-                    usr.setError("Masukkan Nama");
+                    usr.setError("Masukkan Nama"); //memberi set error bertulisan masukan nama
                     email.setError("Masukkan Email");
                     alamat.setError("Masukkan Alamat");
                     pwd.setError("Masukkan Password");
                     repwd.setError("Masukkan Re-Password");
                 } else {
-                    if (pwd.getText().toString().equals(repwd.getText().toString())) {
+                    if (pwd.getText().toString().equals(repwd.getText().toString())) { //untuk mengecek apakah isi dan password dan re password sudah sama
                         Toast.makeText(getApplicationContext(), "registration is successful",
                                 Toast.LENGTH_LONG).show();
                         Intent i = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(i);
                     } else {
-                        Snackbar.make(view, "password and repassword must be same",
+                        Snackbar.make(view, "password and repassword must be same", // menampilkan snackbar password dan re password must be the same
                                 Snackbar.LENGTH_LONG).show();
                     }
                 }
@@ -66,11 +66,11 @@ public class Register extends AppCompatActivity {
         btnbatal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), MainActivity.class); //berpindah layout
                 startActivity(i);
             }
         });
 
     }
 }
-//Source code ini digunakan untuk melakukan register akun
+
